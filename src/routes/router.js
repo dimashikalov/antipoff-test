@@ -6,7 +6,13 @@ import {
   USERS_ROUTE,
   USER_ID_ROUTE,
 } from "../utils/constans";
-import { LoginPage, SingInPage, UserListPage, UserPage } from "../pages";
+import {
+  ErrorPage,
+  LoginPage,
+  SingInPage,
+  UserListPage,
+  UserPage,
+} from "../pages";
 import React from "react";
 import App from "../App";
 
@@ -14,6 +20,7 @@ export const router = createBrowserRouter([
   {
     path: MAIN_ROUTE,
     element: <App />,
+    errorElement: <ErrorPage />,
   },
   {
     path: LOGIN_ROUTE,
