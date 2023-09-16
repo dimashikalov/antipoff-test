@@ -28,7 +28,10 @@ a {
 button {
 	border: none;
 	cursor: pointer;
+	
 }
+
+
 
 :root {
 	--black: #151317;

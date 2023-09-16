@@ -1,5 +1,5 @@
 import React from "react";
-import { Entry } from "../../components";
+import { Entry, Input } from "../../components";
 import styles from "./loginPage.module.css";
 import { Link } from "react-router-dom";
 import { REGISTRATION_ROUTE } from "../../utils/constans";
@@ -15,7 +15,9 @@ export const LoginPage = () => {
   return (
     <div className={styles.wrapper}>
       <Entry title={"Вход"} buttonText={"Войти"} nav={nav}>
-        <input placeholder="email" type="email" />
+        <Input title="Имя" type="text" />
+        <Input title="email" type="email" />
+        <Input title="password" type="password" />
       </Entry>
     </div>
   );
