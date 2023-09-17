@@ -41,7 +41,7 @@ export const LoginPage = () => {
               error={errors.name}
             />
             <Input
-              title="email"
+              title="Электронная почта"
               type="email"
               {...register("email", {
                 required: { value: true, message: "Заполните email" },
@@ -50,7 +50,7 @@ export const LoginPage = () => {
               error={errors.email}
             />
             <Input
-              title="password"
+              title="Пароль"
               type="password"
               {...register("password", {
                 required: { value: true, message: "Заполните password" },
