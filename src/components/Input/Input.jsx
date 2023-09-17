@@ -21,7 +21,6 @@ import cn from "classnames";
 // };
 
 export const Input = forwardRef(({ className, error, ...props }, ref) => {
-  console.log(error);
   return (
     <div className={cn(className, styles.wrapper)}>
       <label htmlFor={props.title} className={styles.label}>
