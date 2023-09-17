@@ -29,7 +29,7 @@ export const LoginPage = () => {
     <div className={styles.wrapper}>
       <div className={styles.form_wrapper}>
         <h3 className={styles.title}>Вход</h3>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
           <div className={styles.inputs}>
             <Input
               title="name"
@@ -67,7 +67,9 @@ export const LoginPage = () => {
               error={errors.password}
             />
           </div>
-          <Button type="submit">Войти</Button>
+          <Button type="submit" size="large">
+            Войти
+          </Button>
         </form>
 
         <div className={styles.nav}>{nav}</div>

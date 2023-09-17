@@ -1,16 +1,24 @@
 .button {
-	width: 100%;
+	align-self: center;
+
 	padding: 13px 0;
 
 	color: var(--white);
 
 	background-color: var(--violet);
 	border-radius: 8px;
-
+	
 	transition: opacity 0.3s ease;
 
 	&:disabled {
 		opacity: 60%;
 		cursor: default;
 	}
+}
+
+.large{
+	width: 100%;	
+}
+.small{
+	width: 100px;	
 }
