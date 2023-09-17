@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Entry, Input } from "../../components";
+import { Button, Entry, Input } from "../../components";
 import styles from "./loginPage.module.css";
 import { Link } from "react-router-dom";
 import { REGISTRATION_ROUTE } from "../../utils/constans";
@@ -66,10 +66,8 @@ export const LoginPage = () => {
               placeholder="Password"
               error={errors.password}
             />
-            <button className={styles.button} type="submit">
-              Войти
-            </button>
           </div>
+          <Button type="submit">Войти</Button>
         </form>
 
         <div className={styles.nav}>{nav}</div>
