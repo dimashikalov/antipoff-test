@@ -4,6 +4,7 @@
 	align-items: flex-start;
 	gap: 8px;
 	align-self: stretch;
+	position: relative;
 }
 
 .input {
@@ -29,4 +30,16 @@
 	font-style: normal;
 	font-weight: 400;
 	line-height: 136.187%
+}
+
+.error {
+	border: 1px solid var(--red);
+}
+
+.errorMessage {
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+
+	color: var(--red);
 }
