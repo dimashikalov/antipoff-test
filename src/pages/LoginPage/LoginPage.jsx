@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Button, Entry, Input } from "../../components";
+import React from "react";
+import { Button, Input } from "../../components";
 import styles from "./loginPage.module.css";
 import { Link } from "react-router-dom";
 import { REGISTRATION_ROUTE } from "../../utils/constans";
@@ -12,7 +12,6 @@ export const LoginPage = () => {
     formState: { errors },
     reset,
   } = useForm();
-  const [error, setError] = useState();
 
   const onSubmit = (formData) => {
     console.log(formData);
