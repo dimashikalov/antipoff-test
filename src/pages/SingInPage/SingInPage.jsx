@@ -48,6 +48,7 @@ export const SingInPage = () => {
             <Input
               title="Электронная почта"
               type="email"
+              name="email"
               {...register("email", {
                 required: { value: true, message: "Заполните email" },
               })}
@@ -57,6 +58,8 @@ export const SingInPage = () => {
             <Input
               title="Пароль"
               type="password"
+              log="password1"
+              hasIconHiding
               {...register("password", {
                 required: { value: true, message: "Заполните password" },
                 minLength: {
@@ -74,6 +77,7 @@ export const SingInPage = () => {
             <Input
               title="Подтвердите пароль"
               type="password"
+              hasIconHiding
               {...register("success_password", {
                 required: { value: true, message: "Заполните password" },
                 minLength: {

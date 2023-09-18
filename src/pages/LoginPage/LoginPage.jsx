@@ -31,15 +31,6 @@ export const LoginPage = () => {
         <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
           <div className={styles.inputs}>
             <Input
-              title="name"
-              type="text"
-              {...register("name", {
-                required: { value: true, message: "Заполните name" },
-              })}
-              placeholder="name"
-              error={errors.name}
-            />
-            <Input
               title="Электронная почта"
               type="email"
               {...register("email", {
@@ -51,6 +42,7 @@ export const LoginPage = () => {
             <Input
               title="Пароль"
               type="password"
+              hasIconHiding
               {...register("password", {
                 required: { value: true, message: "Заполните password" },
                 minLength: {
