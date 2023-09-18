@@ -44,3 +44,41 @@
 .nav>a {
 	color: var(--violet);
 }
+
+.panel {
+	position: relative;
+
+	margin-top: 20px;
+	padding: 20px;
+
+	border-radius: 5px;
+}
+
+.success {
+	background: var(--green-light);
+}
+
+.error {
+	background: var(--red);
+}
+
+.error svg {
+	background: var(--red);
+}
+
+.close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+
+	cursor: pointer;
+
+	border: none;
+	background: none;
+
+
+}
+
+.error .close path {
+	stroke: var(--red);
+}
