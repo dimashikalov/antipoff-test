@@ -15,24 +15,20 @@ export const UserCard = ({ user }) => {
   };
 
   return (
-    <div className={styles.content} onClick={navigateToUser}>
-      <article className={styles.card}>
-        <div className={styles.wrapper}>
-          <div className={styles.person}>
-            <img
-              className={styles.image}
-              src={user.avatar}
-              alt="Аватар представителя команды"
-            />
-            <h2
-              className={styles.heading}
-            >{`${user.first_name} ${user.last_name}`}</h2>
-          </div>
-          <button className={styles.button} type="button">
-            <EmptyLike />
-          </button>
-        </div>
-      </article>
+    <div className={styles.wrapper} onClick={navigateToUser}>
+      <div className={styles.person}>
+        <img
+          className={styles.image}
+          src={user.avatar}
+          alt="Аватар представителя команды"
+        />
+        <h2
+          className={styles.heading}
+        >{`${user.first_name} ${user.last_name}`}</h2>
+      </div>
+      <button className={styles.button} type="button">
+        <EmptyLike />
+      </button>
     </div>
   );
 };

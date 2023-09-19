@@ -1,2 +1,66 @@
 
 
+.content {
+	display: flex;
+	justify-content: center;
+	width: 305px;
+		height: 263px;
+}
+
+.wrapper {
+	display: flex;
+	justify-items: center;
+	/* align-items: center; */
+	flex-direction: column;
+	padding: 20px;
+	width: 305px;
+	height: 263px;
+	border-radius: 10px;
+	box-shadow: 0 0.9960451126098633px 3.984180450439453px 0 rgba(51, 51, 51, 0.15);
+	
+	cursor: pointer;
+}
+
+.person {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 16px;
+
+	* {
+		margin-bottom: 16px;
+	}
+}
+
+.image {
+	width: 124px;
+	height: 124px;
+
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.heading {
+	@include render-font($size: $font-size-l);
+}
+
+.button {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	align-self: flex-end;
+
+	width: 30px;
+	height: 28px;
+
+	background-color: inherit;
+	border-radius: 10px;
+}
+
+/* .like {
+	fill: $color-accent-first-tint;
+
+	path {
+		stroke: $color-accent-first-tint;
+	}
+} */

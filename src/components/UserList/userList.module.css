@@ -1,2 +1,11 @@
 
 
+.wrapper{
+
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(305px, auto));
+	gap: 20px;
+
+	margin-top: 48px;
+}
+
