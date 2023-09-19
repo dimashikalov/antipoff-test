@@ -4,6 +4,7 @@
 	padding: 8px 0;
 
 	color: var(--white);
+	text-align: center;
 
 	background-color: var(--violet);
 	border: 1px solid var(--white);
@@ -11,15 +12,23 @@
 	
 	transition: opacity 0.3s ease;
 
-	&:disabled {
-		opacity: 60%;
-		cursor: default;
-	}
 }
 
 .large{
 	width: 100%;	
 }
+
+.medium{
+	width: 170px;	
+}
+
 .small{
 	width: 100px;	
+}
+
+.arrow {
+	display: inline-block;
+
+	padding-top: 6px;
+	margin-left: 8px;
 }
