@@ -1,29 +1,30 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchUsers } from "../../store/users/usersActionCreator";
+import {
+  fetchMoreUsers,
+  fetchUsers,
+} from "../../store/users/usersActionCreator";
 import { Header } from "../../components/Header/Header";
 import styles from "./userListPage.module.css";
 import { UserList } from "../../components/UserList/UserList";
 import { Button } from "../../components/Button/Button";
 
 export const UserListPage = () => {
-  const { users, isLoading } = useSelector((state) => state.users);
+  const { users, isLoading, page, total_pages } = useSelector(
+    (state) => state.users
+  );
   const { auth } = useSelector((state) => state.auth);
 
   const dispatch = useDispatch();
 
-  console.log("start 1111", auth);
-
   const getUsers = async () => {
-    await dispatch(fetchUsers());
+    if (page === +total_pages) return;
+    await dispatch(fetchMoreUsers(page + 1));
   };
 
-  // getUsers();
-
   useEffect(() => {
-    console.log("start auth", auth);
     if (auth) {
-      getUsers();
+      dispatch(fetchUsers());
     }
   }, [auth]);
 
@@ -41,8 +42,10 @@ export const UserListPage = () => {
       </Header>
       <div className={styles.content}>
         {isLoading && <h1>Идет загрузка...</h1>}
-        {users && <UserList userList={users.data} />}
-        <div className={styles.buttonWrapper}>
+
+        {users && <UserList userList={users} />}
+
+        <div className={styles.buttonWrapper} onClick={getUsers}>
           <Button className={styles.button} size="medium" arrow>
             Показать еще
           </Button>

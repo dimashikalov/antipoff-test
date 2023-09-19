@@ -4,6 +4,8 @@ const initialState = {
   isLoading: false,
   isError: "",
   users: [],
+  page: 1,
+  total_pages: "",
   user: {},
 };
 
@@ -18,7 +20,17 @@ export const usersSlice = createSlice({
     usersFetchingSuccess(state, action) {
       state.isLoading = false;
       state.isError = "";
-      state.users = action.payload;
+      state.users = action.payload.data;
+      state.page = action.payload.page;
+      state.total_pages = action.payload.total_pages;
+    },
+
+    usersMoreFetchingSuccess(state, action) {
+      state.isLoading = false;
+      state.isError = "";
+      state.users = [...state.users, ...action.payload.data];
+      state.page = action.payload.page;
+      state.total_pages = action.payload.total_pages;
     },
 
     usersFetchingError(state, action) {
@@ -39,6 +51,7 @@ export const {
   usersFetchingError,
   usersFetchingSuccess,
   userSingleFetchingSuccess,
+  usersMoreFetchingSuccess,
 } = usersSlice.actions;
 
 export default usersSlice.reducer;
