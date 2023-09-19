@@ -16,7 +16,6 @@ export const registrationUser = (authData) => async (dispatch) => {
   try {
     const response = await axios.post(API.auth.registration, data);
     dispatch(authFetchingSuccess(response.data));
-    console.log("res", response);
   } catch (error) {
     dispatch(authFetchingError(error.message));
   }

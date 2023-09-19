@@ -2,10 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   isLoading: false,
-  error: "",
+  isError: "",
   auth: false,
   token: "",
-  user: {},
 };
 
 export const authSlice = createSlice({
@@ -18,9 +17,8 @@ export const authSlice = createSlice({
 
     authFetchingSuccess(state, action) {
       state.isLoading = false;
-      state.error = "";
+      state.isError = "";
       state.auth = true;
-      state.user = action.payload.user;
       state.token = action.payload.token;
       localStorage.setItem(
         "token",
@@ -33,22 +31,19 @@ export const authSlice = createSlice({
 
     authFetchingError(state, action) {
       state.isLoading = false;
-      state.error = action.payload;
+      state.isError = action.payload;
     },
 
     authExit(state) {
       localStorage.removeItem("token");
       state.auth = false;
-      state.user = {};
     },
 
     checkUserAuth(state) {
       const token = localStorage.getItem("token");
 
       if (token) {
-        state.user = token.user;
         state.token = token.token;
-
         state.auth = true;
       }
     },
