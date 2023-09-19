@@ -19,13 +19,16 @@ export const authSlice = createSlice({
     authFetchingSuccess(state, action) {
       state.isLoading = false;
       state.error = "";
-      state.auth = false;
+      state.auth = true;
       state.user = action.payload.user;
       state.token = action.payload.token;
-      localStorage.setItem("token", {
-        token: action.payload.token,
-        user: action.payload.user,
-      });
+      localStorage.setItem(
+        "token",
+        JSON.stringify({
+          token: action.payload.token,
+          user: action.payload.user,
+        })
+      );
     },
 
     authFetchingError(state, action) {

@@ -1,10 +1,6 @@
 import axios from "axios";
 import { API } from "../../utils/api";
-import { authFetchingError } from "./authSlice";
-
-// const headers = {
-//   "Content-Type": "application/json",
-// };
+import { authFetchingError, authFetchingSuccess } from "./authSlice";
 
 export const registrationUser = (authData) => async (dispatch) => {
   let email;
@@ -19,8 +15,9 @@ export const registrationUser = (authData) => async (dispatch) => {
   };
   try {
     const response = await axios.post(API.auth.registration, data);
+    dispatch(authFetchingSuccess(response.data));
     console.log("res", response);
   } catch (error) {
-    // dispatch(authFetchingError(error.message));
+    dispatch(authFetchingError(error.message));
   }
 };

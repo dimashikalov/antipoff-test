@@ -1,17 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Input } from "../../components";
 import styles from "./singInPage.module.css";
-import { Link } from "react-router-dom";
-import { LOGIN_ROUTE } from "../../utils/constans";
+import { Link, useNavigate } from "react-router-dom";
+import { LOGIN_ROUTE, USERS_ROUTE } from "../../utils/constans";
 import { useForm } from "react-hook-form";
 import cn from "classnames";
 import { ReactComponent as CloseIcon } from "./close.svg";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { registrationUser } from "../../store/auth/authActionCreators";
 
 export const SingInPage = () => {
   const [error, setError] = useState();
+  const { auth } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const {
     register,
@@ -27,6 +29,12 @@ export const SingInPage = () => {
       dispatch(registrationUser(formData));
     }
   };
+
+  useEffect(() => {
+    if (auth) {
+      navigate(USERS_ROUTE);
+    }
+  }, [auth]);
 
   const nav = (
     <>
@@ -55,6 +63,12 @@ export const SingInPage = () => {
               name="email"
               {...register("email", {
                 required: { value: true, message: "Заполните email" },
+
+                pattern: {
+                  value:
+                    /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/,
+                  message: "Заполните email корректно",
+                },
               })}
               placeholder="Email"
               error={errors.email}
