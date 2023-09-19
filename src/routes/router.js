@@ -1,35 +1,13 @@
-import { createBrowserRouter } from "react-router-dom";
 import {
   LOGIN_ROUTE,
-  MAIN_ROUTE,
   REGISTRATION_ROUTE,
   USERS_ROUTE,
   USER_ID_ROUTE,
 } from "../utils/constans";
-import {
-  ErrorPage,
-  LoginPage,
-  SingInPage,
-  UserListPage,
-  UserPage,
-} from "../pages";
+import { LoginPage, SingInPage, UserListPage, UserPage } from "../pages";
 import React from "react";
-import App from "../App";
 
-export const router = createBrowserRouter([
-  {
-    path: MAIN_ROUTE,
-    element: <App />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: LOGIN_ROUTE,
-    element: <LoginPage />,
-  },
-  {
-    path: REGISTRATION_ROUTE,
-    element: <SingInPage />,
-  },
+export const privateRoutes = [
   {
     path: USERS_ROUTE,
     element: <UserListPage />,
@@ -38,4 +16,15 @@ export const router = createBrowserRouter([
     path: USER_ID_ROUTE,
     element: <UserPage />,
   },
-]);
+];
+
+export const publicRoutes = [
+  {
+    path: LOGIN_ROUTE,
+    element: <LoginPage />,
+  },
+  {
+    path: REGISTRATION_ROUTE,
+    element: <SingInPage />,
+  },
+];

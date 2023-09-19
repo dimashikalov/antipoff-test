@@ -1,10 +1,12 @@
+export const REQUEST_URL = "https://reqres.in";
+
 export const API = {
   users: {
-    getUsers: process.env.NEXT_PUBLIC_DOMAIN + "/api/users?page=",
-    getSingleUser: process.env.NEXT_PUBLIC_DOMAIN + "/api/users/",
+    getUsers: REQUEST_URL + "/api/users?page=",
+    getSingleUser: REQUEST_URL + "/api/users/",
   },
   auth: {
-    registration: process.env.NEXT_PUBLIC_DOMAIN + "/api/register",
-    login: process.env.NEXT_PUBLIC_DOMAIN + "/api/login",
+    registration: REQUEST_URL + "/api/register",
+    login: REQUEST_URL + "/api/login",
   },
 };

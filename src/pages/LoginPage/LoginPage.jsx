@@ -4,8 +4,12 @@ import styles from "./loginPage.module.css";
 import { Link } from "react-router-dom";
 import { REGISTRATION_ROUTE } from "../../utils/constans";
 import { useForm } from "react-hook-form";
+import { useDispatch } from "react-redux";
+import { registrationUser } from "../../store/auth/authActionCreators";
 
 export const LoginPage = () => {
+  const dispatch = useDispatch();
+
   const {
     register,
     handleSubmit,
@@ -14,7 +18,7 @@ export const LoginPage = () => {
   } = useForm();
 
   const onSubmit = (formData) => {
-    console.log(formData);
+    dispatch(registrationUser(formData));
   };
 
   const nav = (

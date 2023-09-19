@@ -6,9 +6,13 @@ import { LOGIN_ROUTE } from "../../utils/constans";
 import { useForm } from "react-hook-form";
 import cn from "classnames";
 import { ReactComponent as CloseIcon } from "./close.svg";
+import { useDispatch } from "react-redux";
+import { registrationUser } from "../../store/auth/authActionCreators";
 
 export const SingInPage = () => {
   const [error, setError] = useState();
+  const dispatch = useDispatch();
+
   const {
     register,
     handleSubmit,
@@ -17,10 +21,10 @@ export const SingInPage = () => {
   } = useForm();
 
   const onSubmit = (formData) => {
-    if (formData.password === formData.success_password) {
-      console.log(formData);
-    } else {
+    if (formData.password !== formData.success_password) {
       setError("Пароли должны совпадать");
+    } else {
+      dispatch(registrationUser(formData));
     }
   };
 
