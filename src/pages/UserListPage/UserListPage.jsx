@@ -4,6 +4,7 @@ import { fetchUsers } from "../../store/users/usersActionCreator";
 import { Header } from "../../components/Header/Header";
 import styles from "./userListPage.module.css";
 import { UserList } from "../../components/UserList/UserList";
+import { Button } from "../../components/Button/Button";
 
 export const UserListPage = () => {
   const { users, isLoading } = useSelector((state) => state.users);
@@ -38,8 +39,15 @@ export const UserListPage = () => {
           </p>
         </div>
       </Header>
-      {isLoading && <h1>Идет загрузка...</h1>}
-      {users && <UserList userList={users.data} />}
+      <div className={styles.content}>
+        {isLoading && <h1>Идет загрузка...</h1>}
+        {users && <UserList userList={users.data} />}
+        <div className={styles.buttonWrapper}>
+          <Button className={styles.button} size="medium" arrow>
+            Показать еще
+          </Button>
+        </div>
+      </div>
     </>
   );
 };
