@@ -10,9 +10,9 @@ import {
 export const fetchUsers = () => async (dispatch) => {
   dispatch(usersFetching);
   try {
-    const response = axios.get(API.users.getUsers);
-    console.log("res", (await response).data);
-    dispatch(usersFetchingSuccess((await response).data));
+    const response = await axios.get(API.users.getUsers);
+    console.log("res", response.data);
+    return dispatch(usersFetchingSuccess(response.data));
   } catch (error) {
     dispatch(usersFetchingError);
   }
@@ -20,8 +20,8 @@ export const fetchUsers = () => async (dispatch) => {
 export const fetchSingleUser = (id) => async (dispatch) => {
   dispatch(usersFetching);
   try {
-    const response = axios.get(API.users.getSingleUser + id);
-    console.log("res", response.data);
+    const response = await axios.get(API.users.getSingleUser + id);
+    console.log("res single", response.data);
     dispatch(userSingleFetchingSuccess(response.data));
   } catch (error) {
     dispatch(usersFetchingError);

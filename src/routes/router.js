@@ -2,7 +2,7 @@ import {
   LOGIN_ROUTE,
   REGISTRATION_ROUTE,
   USERS_ROUTE,
-  USER_ID_ROUTE,
+  // USER_ID_ROUTE,
 } from "../utils/constans";
 import { LoginPage, SingInPage, UserListPage, UserPage } from "../pages";
 import React from "react";
@@ -13,7 +13,7 @@ export const privateRoutes = [
     element: <UserListPage />,
   },
   {
-    path: USER_ID_ROUTE,
+    path: USERS_ROUTE + "/:id",
     element: <UserPage />,
   },
 ];

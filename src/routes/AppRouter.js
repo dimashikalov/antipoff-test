@@ -5,7 +5,6 @@ import { LOGIN_ROUTE } from "../utils/constans";
 
 const AppRouter = () => {
   const { auth } = useSelector((state) => state.auth);
-  console.log(auth);
 
   return (
     <Routes>

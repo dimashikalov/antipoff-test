@@ -1,0 +1,32 @@
+.header {
+	height: 265px;
+	color: var(--white);
+	background-color: var(--violet)
+}
+
+.wrapper{
+	display: grid;
+		grid-template-areas:
+			'back content exit'
+			'. content .';
+		grid-template-columns: auto 1 fr auto;
+		justify-content: space-between;
+		margin: 0 auto;
+		padding-top: 32px;
+}
+
+
+.exit,
+.back {
+	/* display: inline-flex;
+	padding: 7px 15px; */
+}
+
+.back {
+	grid-area: back;
+	
+}
+.exit {
+	grid-area: exit;
+	margin-right: 80px;
+}
