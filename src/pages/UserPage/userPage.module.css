@@ -1,5 +1,6 @@
 .member{
 	display: grid;
+	justify-self: flex-start;
 	grid-template-columns: 1fr auto;
 	grid-template-areas:
 			"avatar info";
@@ -23,6 +24,8 @@
 	display: flex;
 	flex-direction: column;
 	row-gap: 20px;
+	text-align: center;
+	
 	
 }
 
@@ -80,8 +83,9 @@
 		grid-template-areas:
 			" info "
 			" avatar ";
-		justify-items: center;
+		/* justify-items: center; */
 		grid-area: content;
+		justify-self: center;
 	}
 
 	.avatar {

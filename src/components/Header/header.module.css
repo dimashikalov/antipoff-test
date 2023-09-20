@@ -7,22 +7,20 @@
 .wrapper{
 	display: grid;
 		grid-template-areas:
-			'back content exit'
-			'. content .';
-		grid-template-columns: auto 1 fr auto;
-		justify-content: space-between;
+			'back content . exit'
+			'. content . .';
+		justify-items: center;
 		margin: 0 auto;
 		padding-top: 32px;
 }
 
 .back {
 	grid-area: back;
-	margin-left: 80px;
 	
 }
 .exit {
 	grid-area: exit;
-	/* right: 80px;/ */
+	justify-self: end;
 	margin-right: 80px;
 }
 
@@ -30,32 +28,31 @@
 	.wrapper {
 		grid-template-areas:
 				'back . exit'
-				'content content content'
-				'content content content';
+				'. content .'
+				'. content .';
 			padding: 12px 0;
 	}	
 
-	.back{
-		
-		margin-left: 16px;
-		justify-content: center;
-		align-items: center;
+	.back{		
+		justify-items: baseline;
 		border: none;
+		width: 40px;
+		height: 40px;
+
 		&::after {
-				content: url(./arrow-left.svg);
-				width: 40px;
-				height: 40px;
-				
-			}
+			content: url(./arrow-left.svg);			
+		}
 	}
 	.exit{
 		margin-right: 16px;
 		border: none;
-			&::after {				
-					content: url(./exit.svg);
-					width: 40px;
-					height: 40px;
-				}
+		width: 40px;
+		height: 40px;
+		padding: 0px;
+
+		&::after {				
+			content: url(./exit.svg);					
+		}
 	}
 
 }
