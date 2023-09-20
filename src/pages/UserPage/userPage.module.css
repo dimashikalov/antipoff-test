@@ -1,0 +1,70 @@
+.member{
+	display: flex;
+	align-items: center;
+	column-gap: 32px;
+	grid-area: content;
+	padding-top: 7px;
+}
+
+.avatar {
+	width: 187px;
+	height: 187px;
+
+	object-fit: cover;
+	border-radius: 50%;	
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+	
+}
+
+.wrapper {
+	display: grid;grid-template-columns: 1fr auto;
+	grid-template-areas: 
+		"content info";
+	justify-content: center;
+
+	column-gap: 129px;
+	margin: 0 auto;
+	padding: 49px ;	
+}
+
+.description {
+	grid-area: content;
+	max-width: 630px;
+
+	white-space: pre-wrap;	
+}
+
+.contacts {
+	grid-area: info;
+	display: flex;
+	flex-direction: column;
+	row-gap: 24px;
+}
+
+.contact {
+	display: flex;
+	align-items: center;
+	column-gap: 8px;
+
+	color: inherit;
+}
+
+@media screen and (max-width: 640px) {
+	.wrapper {
+			grid-template-columns: 1fr;
+			grid-template-areas:
+				"info"
+				"content";
+			justify-content: flex-start;
+			padding:16px ;	
+	}
+
+	.contacts{
+		padding-left: 0;
+	}
+}

@@ -15,11 +15,10 @@ export const Header = ({ children, hasBackButton = false }) => {
         {hasBackButton && (
           <Button
             className={styles.back}
-            type="button"
-
-            // onClick={() => navigate(ROUTES.ourTeam.main)}
+            size="small"
+            onClick={() => navigate(-1)}
           >
-            "Назад"
+            Назад
           </Button>
         )}
 

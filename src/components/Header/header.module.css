@@ -15,15 +15,9 @@
 		padding-top: 32px;
 }
 
-
-.exit,
-.back {
-	/* display: inline-flex;
-	padding: 7px 15px; */
-}
-
 .back {
 	grid-area: back;
+	margin-left: 80px;
 	
 }
 .exit {

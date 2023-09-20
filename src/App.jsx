@@ -6,10 +6,14 @@ import { fetchUsers } from "./store/users/usersActionCreator";
 
 function App() {
   const dispatch = useDispatch();
+  const { auth } = useSelector((state) => state.auth);
 
   useEffect(() => {
     dispatch(checkUserAuth());
-  }, []);
+    if (auth) {
+      dispatch(fetchUsers());
+    }
+  }, [auth]);
 
   return (
     <>

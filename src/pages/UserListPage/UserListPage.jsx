@@ -1,9 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  fetchMoreUsers,
-  fetchUsers,
-} from "../../store/users/usersActionCreator";
+import { fetchMoreUsers } from "../../store/users/usersActionCreator";
 import { Header } from "../../components/Header/Header";
 import styles from "./userListPage.module.css";
 import { UserList } from "../../components/UserList/UserList";
@@ -13,7 +10,6 @@ export const UserListPage = () => {
   const { users, isLoading, page, total_pages } = useSelector(
     (state) => state.users
   );
-  const { auth } = useSelector((state) => state.auth);
 
   const dispatch = useDispatch();
 
@@ -21,12 +17,6 @@ export const UserListPage = () => {
     if (page === +total_pages) return;
     await dispatch(fetchMoreUsers(page + 1));
   };
-
-  useEffect(() => {
-    if (auth) {
-      dispatch(fetchUsers());
-    }
-  }, [auth]);
 
   return (
     <>
