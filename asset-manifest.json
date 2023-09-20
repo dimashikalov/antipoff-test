@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/antipoff-test/static/css/main.24642386.css",
+    "main.css": "/antipoff-test/static/css/main.5e4dd7bc.css",
     "main.js": "/antipoff-test/static/js/main.5bc258ae.js",
     "static/media/openEye.svg": "/antipoff-test/static/media/openEye.c47b5ba141d0c7681e9eb388070706d8.svg",
     "static/media/exit.svg": "/antipoff-test/static/media/exit.029da92b45a01830dacb.svg",
@@ -12,11 +12,11 @@
     "static/media/letter.svg": "/antipoff-test/static/media/letter.404b6dc69a7a7d62e728f0d5b60ff0fe.svg",
     "static/media/emptyLike.svg": "/antipoff-test/static/media/emptyLike.a0e06eb36c8677c016ff70eb6b62088c.svg",
     "static/media/close.svg": "/antipoff-test/static/media/close.a1b05e5af0d02987047c5850b27dce55.svg",
-    "main.24642386.css.map": "/antipoff-test/static/css/main.24642386.css.map",
+    "main.5e4dd7bc.css.map": "/antipoff-test/static/css/main.5e4dd7bc.css.map",
     "main.5bc258ae.js.map": "/antipoff-test/static/js/main.5bc258ae.js.map"
   },
   "entrypoints": [
-    "static/css/main.24642386.css",
+    "static/css/main.5e4dd7bc.css",
     "static/js/main.5bc258ae.js"
   ]
 }
