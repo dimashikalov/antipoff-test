@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/antipoff-test/static/css/main.24642386.css",
+    "main.js": "/antipoff-test/static/js/main.5bc258ae.js",
+    "static/media/openEye.svg": "/antipoff-test/static/media/openEye.c47b5ba141d0c7681e9eb388070706d8.svg",
+    "static/media/exit.svg": "/antipoff-test/static/media/exit.029da92b45a01830dacb.svg",
+    "static/media/arrow.svg": "/antipoff-test/static/media/arrow.5b35d712268c57e35a049a14ad8cceba.svg",
+    "static/media/phone.svg": "/antipoff-test/static/media/phone.633ddd5e63acb10afcea3c25e162deda.svg",
+    "static/media/arrow-left.svg": "/antipoff-test/static/media/arrow-left.1f1a5733703b8fda68d5.svg",
+    "index.html": "/antipoff-test/index.html",
+    "static/media/closeEye.svg": "/antipoff-test/static/media/closeEye.f1d5b3a5a6746de3d665f374a2ee72f7.svg",
+    "static/media/letter.svg": "/antipoff-test/static/media/letter.404b6dc69a7a7d62e728f0d5b60ff0fe.svg",
+    "static/media/emptyLike.svg": "/antipoff-test/static/media/emptyLike.a0e06eb36c8677c016ff70eb6b62088c.svg",
+    "static/media/close.svg": "/antipoff-test/static/media/close.a1b05e5af0d02987047c5850b27dce55.svg",
+    "main.24642386.css.map": "/antipoff-test/static/css/main.24642386.css.map",
+    "main.5bc258ae.js.map": "/antipoff-test/static/js/main.5bc258ae.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.24642386.css",
+    "static/js/main.5bc258ae.js"
+  ]
+}
