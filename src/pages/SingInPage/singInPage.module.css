@@ -8,15 +8,14 @@
 }
 .form_wrapper{
 	display: flex;
-		flex-direction: column;
-		width: 500px;
-		padding: 16px;
+	flex-direction: column;
+	width: 500px;
+	padding: 16px;	
+	gap: 16px;
 	
-		gap: 16px;
-	
-		border-radius: 16px;
-		background: var(--white);
-		box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
+	border-radius: 16px;
+	background: var(--white);
+	box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
 }
 
 .form{
@@ -81,4 +80,11 @@
 
 .error .close path {
 	stroke: var(--red);
+}
+
+@media screen and (max-width: 640px) {
+	.form_wrapper {
+		width: 100%;
+					
+	}
 }

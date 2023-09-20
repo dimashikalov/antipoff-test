@@ -13,7 +13,6 @@ export const UserPage = () => {
 
   const currentUser = users?.find((user) => user.id === Number(id));
 
-  console.log("cur", currentUser);
   return (
     <>
       <Header hasBackButton>

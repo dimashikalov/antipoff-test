@@ -44,3 +44,12 @@
 .nav>a {
 	color: var(--violet);
 }
+
+@media screen and (max-width: 640px) {
+	.form_wrapper {
+		/* width: auto; */
+			/* max-width: 500px;
+			margin: 16px; */
+			width: 100%;
+		}
+}
