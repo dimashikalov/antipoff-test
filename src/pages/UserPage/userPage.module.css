@@ -27,8 +27,7 @@
 }
 
 .wrapper {
-	display: grid;
-	grid-template-columns: 1fr auto;
+	display: grid;	
 	grid-template-areas: 
 		"content info";
 	justify-content: center;
@@ -92,6 +91,8 @@
 	.info {		
 
 		align-items: center;
-		row-gap: 0;		
+		row-gap: 0;
+		
+		margin-bottom: 16px;
 	}
 }

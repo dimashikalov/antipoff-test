@@ -25,8 +25,8 @@ export const Header = ({ children, hasBackButton = false }) => {
             {width > 640 ? "Назад" : ""}
           </Button>
         )}
-
         {children}
+
         <Button
           className={styles.exit}
           size="small"
