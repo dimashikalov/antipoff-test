@@ -3,16 +3,7 @@
 	row-gap: 56px;
 	margin: 0 auto;
 	padding: 48px 0 69px;
-/* 
-	@media screen and (max-width: calc($media-desktop - 1px)) {
-		margin: 0 $adaptive-indents-sides-first;
-	} */
 
-	/* @media screen and (max-width: calc($media-tablet - 1px)) {
-		row-gap: 32px;
-		margin: 0 $adaptive-indents-sides-fourth;
-		padding-top: 32px;
-	} */
 }
 
 .text {
@@ -29,28 +20,20 @@
 		text-align: center;
 	}
 
-	/* @media screen and (max-width: calc($media-tablet - 1px)) {
-		max-width: 334px;
-		padding-top: 12px;
-		padding-left: 0;
-	} */
 }
 
 .heading {
-	/* @include render-font($size: $font-size-xxxl,
-		$color: $color-primary-first-tint );
-
-	@media screen and (max-width: calc($media-desktop-s - 1px)) {
-		font-size: calc($font-size-xxl + (28 + 28 * 0.7) * (100vw - $media-mobile) / 1279);
-	} */
+	font-size: 36px;
+	font-style: normal;
+	font-weight: 400;
 }
 
 .subheading {
-	/* @include render-font($size: $font-size-l, $color: $color-primary-second-tint);
-
-	@media screen and (max-width: calc($media-desktop-s - 1px)) {
-		font-size: calc($font-size-m + (4 + 4 * 0.7) * (100vw - $media-mobile) / 1279);
-	} */
+	color: var(--gray-light);
+	text-align: center;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
 }
 
 .content{
@@ -88,6 +71,11 @@
 @media screen and (max-width: 640px) {
 	.content {
 		justify-content: center;
+	}
+
+	.text {
+		padding:16px;
+	
 	}
 }
 

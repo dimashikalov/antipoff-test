@@ -1,5 +1,8 @@
 .member{
-	display: flex;
+	display: grid;
+	grid-template-columns: 1fr auto;
+	grid-template-areas:
+			"avatar info";
 	align-items: center;
 	column-gap: 32px;
 	grid-area: content;
@@ -7,6 +10,7 @@
 }
 
 .avatar {
+	grid-area: avatar;
 	width: 187px;
 	height: 187px;
 
@@ -15,6 +19,7 @@
 }
 
 .info {
+	grid-area: info;
 	display: flex;
 	flex-direction: column;
 	row-gap: 20px;
@@ -22,7 +27,8 @@
 }
 
 .wrapper {
-	display: grid;grid-template-columns: 1fr auto;
+	display: grid;
+	grid-template-columns: 1fr auto;
 	grid-template-areas: 
 		"content info";
 	justify-content: center;
@@ -66,5 +72,26 @@
 
 	.contacts{
 		padding-left: 0;
+	}
+
+	
+	.member {
+				
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			" info "
+			" avatar ";
+		justify-items: center;
+		grid-area: content;
+	}
+
+	.avatar {
+			margin-bottom: 64px;
+		}
+
+	.info {		
+
+		align-items: center;
+		row-gap: 0;		
 	}
 }

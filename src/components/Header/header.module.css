@@ -1,5 +1,5 @@
 .header {
-	height: 265px;
+	min-height: 265px;
 	color: var(--white);
 	background-color: var(--violet)
 }
@@ -23,4 +23,38 @@
 .exit {
 	grid-area: exit;
 	margin-right: 80px;
+}
+
+@media screen and (max-width: 640px) {
+	.wrapper {
+		grid-template-areas:
+				'back . exit'
+				'content content content'
+				'content content content';
+			padding: 12px 0;
+	}	
+
+	.back{
+		
+		margin-left: 16px;
+		justify-content: center;
+		align-items: center;
+		border: none;
+		&::after {
+				content: url(./arrow-left.svg);
+				width: 40px;
+				height: 40px;
+				
+			}
+	}
+	.exit{
+		margin-right: 16px;
+		border: none;
+			&::after {				
+					content: url(./exit.svg);
+					width: 40px;
+					height: 40px;
+				}
+	}
+
 }
